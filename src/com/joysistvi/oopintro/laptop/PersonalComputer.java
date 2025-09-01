@@ -5,10 +5,7 @@
  */
 package com.joysistvi.oopintro.laptop;
 
-/**
- *
- * @author Yuno
- */
+//DRY Principle
 public class PersonalComputer {
     // Class is a blueprint where objects are created
     // attributes / states
