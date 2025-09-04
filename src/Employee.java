@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.oopintro.laptop;
 
 
-public class Laptop extends PersonalComputer{
-    
-    
+public class Employee {
+    // HR Dept
 }

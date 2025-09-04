@@ -8,10 +8,14 @@ package com.joysis.load_reg.day20;
 import java.util.Scanner;
 
 public class LoadRegistrationSystem {
-
+    static Scanner scanner = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        mainMenu();
+        scanner.close();
+    }
+    
     public static void mainMenu() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Dial *143# to access Globe Services");
         System.out.print("Enter USSD Code: ");
         String dial = scanner.nextLine();
@@ -55,6 +59,8 @@ public class LoadRegistrationSystem {
             System.out.println("Invalid USSD Code");
         }
     }
+    
+    
 
     public static void goPlusPromo() {
         Scanner scanner = new Scanner(System.in);
@@ -109,6 +115,27 @@ public class LoadRegistrationSystem {
         }
 
     }
+    
+    
+    public static void subscribe(String promoType, int gb) {
+        System.out.println("\n\n\t*** " + promoType + " Promo ***");
+        System.out.println("-> Get " + gb + " GB for all sites + 8GB for Tiktok");
+
+        System.out.println("    [1] Subscribe");
+        System.out.println("    [2] Back");
+        System.out.println("    [3] Exit");
+        System.out.print("Enter a choice: ");
+        int choiceGoPlus = 0;
+
+        if (choiceGoPlus == 1) {
+            System.out.println("You are now subscribed to " + promoType);
+        } else if (choiceGoPlus == 2) {
+            //back
+        } else {
+            exitConfirmation();
+        }
+
+    }
 
     public static void goPromo() {
 
@@ -129,6 +156,12 @@ public class LoadRegistrationSystem {
     public static void exitConfirmation() {
         System.out.println("    [Y] Yes");
         System.out.println("    [N} No");
+        
+        if (true) {
+            
+        } else {
+            
+        }
     }
 
 }

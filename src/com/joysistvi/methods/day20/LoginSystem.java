@@ -18,8 +18,8 @@ public class LoginSystem {
     public static boolean login(String username, String password) { // method header
         String regUsername = "admin";
         String regPassword = "admin"; // local variable
-        
-        return (regUsername.equals(username) && regPassword.equals(password));
+        return regUsername.equals(username) && regPassword.equals(password);
+         
         
     }
     

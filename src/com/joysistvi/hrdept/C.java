@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.oopintro.laptop;
+package com.joysistvi.hrdept;
 
 
-public class Laptop extends PersonalComputer{
+public class C{
     
-    
+    public static void main(String[] args) {
+        A.printName();
+        
+    }
 }

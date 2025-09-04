@@ -3,10 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.oopintro.laptop;
+package com.joysis.accounting;
 
 
-public class Laptop extends PersonalComputer{
+
+/**
+ *
+ * @author Yuno
+ */
+public class D{
     
-    
+    public static void main(String[] args) {
+       
+    }
 }
