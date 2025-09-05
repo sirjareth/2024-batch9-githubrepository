@@ -6,42 +6,112 @@
 package com.joysistvi.encapsulation.model;
 
 // Model
+// Single Responsibily Principle 
 public class Student {
-    
+
     // data members / private fields
     private int id;
     private String name;
     private String address;
     private int age;
     private String course;
-    
-    // mutator method / setter
-    public void setId(int id){
-       this.id = id;
+    private String section;
+    private String schoolName;
+
+    // method overloading
+    //default constructor
+    public Student() {
+
     }
-    
-    // accessor method / getter
-    public int getId(){
+
+    // setter constructor
+    public Student(int id, String name, String address, int age, String course, String section) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.age = age;
+        this.course = course;
+        this.section = section;
+        schoolName = "STI Orca";
+        System.out.println("Student " + name + " is created successfully!");
+    }
+
+    public Student(int id, String name, String address, int age, String course) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.age = age;
+        this.course = course;
+
+        System.out.println("Student " + name + " is created successfully!");
+    }
+
+    public Student(int id, String name, String address, int age) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.age = age;
+
+        System.out.println("Student " + name + " is created successfully!");
+    }
+
+    // setter method
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // alt + insert
+    public int getId() {
         return id;
     }
-    
-    public void setName(String name){
-        this.name = name;
-    }
-    
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
 }
 
 
 /* Fully Encapsulated Class
     1. making all the data members of the class private - data hiding
     2. use setter and getter methods to set and get the data in it - data validation
-    */
-
-
+ */
 // conventional 
-    // unconvential 
+// unconvential 
     // this kw -> immediately refer to the current object

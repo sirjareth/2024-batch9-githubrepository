@@ -12,25 +12,15 @@ public class Main {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Student student = new Student();
-        System.out.println("* Student Registration System *");
-        // ID
-        System.out.print("Enter ID: ");
-        int id = sc.nextInt();
-        sc.nextLine();
-        student.setId(id);
         
-        // Name
-        System.out.print("Enter Name: ");
-        String name = sc.nextLine();
-        student.setName(name);
+        Student student1 = new Student(1, "Winter", "Manila", 55, "BSIT", "Molave");
         
         
         
         
-        id = student.getId();
-        System.out.println("ID: " + id);
-        name = student.getName();
-        System.out.println("Name: " + name);
+        
+        
+        
+        
     }
 }
