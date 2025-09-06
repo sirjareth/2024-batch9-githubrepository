@@ -21,9 +21,9 @@ public class Student {
     // method overloading
     //default constructor
     public Student() {
-
+        
     }
-
+    
     // setter constructor
     public Student(int id, String name, String address, int age, String course, String section) {
         this.id = id;
@@ -42,7 +42,7 @@ public class Student {
         this.address = address;
         this.age = age;
         this.course = course;
-
+        schoolName = "STI Orca";
         System.out.println("Student " + name + " is created successfully!");
     }
 
@@ -51,9 +51,16 @@ public class Student {
         this.name = name;
         this.address = address;
         this.age = age;
-
+        schoolName = "STI Orca";
         System.out.println("Student " + name + " is created successfully!");
     }
+
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    
+    
 
     // setter method
     public void setId(int id) {
@@ -104,6 +111,14 @@ public class Student {
     public void setSection(String section) {
         this.section = section;
     }
+    
+    // alt + insert
+
+    @Override
+    public String toString() {
+        return "Student{" + "id=" + id + ", name=" + name + ", address=" + address + ", age=" + age + ", course=" + course + ", section=" + section + ", schoolName=" + schoolName + '}';
+    }
+    
 
 }
 
