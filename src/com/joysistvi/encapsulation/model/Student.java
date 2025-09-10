@@ -18,7 +18,7 @@ public class Student {
     private String section;
     private String schoolName;
 
-    // method overloading
+    // method overloading - over loading constructor
     //default constructor
     public Student() {
         
@@ -66,6 +66,8 @@ public class Student {
     public void setId(int id) {
         this.id = id;
     }
+    
+    
 
     // alt + insert
     public int getId() {

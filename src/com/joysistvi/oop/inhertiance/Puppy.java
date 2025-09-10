@@ -9,10 +9,9 @@ package com.joysistvi.oop.inhertiance;
  *
  * @author Yuno
  */
-public class Dog extends Animal{
-    
+public class Puppy extends Dog{
     
     public void eat(){
-    
+        
     }
 }

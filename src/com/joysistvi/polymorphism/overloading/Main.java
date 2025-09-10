@@ -3,16 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.oop.inhertiance;
+package com.joysistvi.polymorphism.overloading;
 
 /**
  *
  * @author Yuno
  */
-public class Dog extends Animal{
+public class Main {
     
     
-    public void eat(){
-    
-    }
 }

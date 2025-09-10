@@ -5,14 +5,8 @@
  */
 package com.joysistvi.oop.inhertiance;
 
-/**
- *
- * @author Yuno
- */
-public class Dog extends Animal{
+
+public class Planet {
     
     
-    public void eat(){
-    
-    }
 }

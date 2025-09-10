@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.oop.inhertiance;
+package com.joysis.abstraction.bankingapp;
 
 /**
  *
  * @author Yuno
  */
-public class Dog extends Animal{
+public abstract class Account {
     
-    
-    public void eat(){
-    
-    }
 }

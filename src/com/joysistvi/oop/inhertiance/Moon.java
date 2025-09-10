@@ -5,10 +5,17 @@
  */
 package com.joysistvi.oop.inhertiance;
 
-/**
- *
- * @author Yuno
- */
+
 public class Moon{
+    
+    boolean hasLight;
+    
+    boolean hasAtmosphere;
+
+    public Moon(boolean hasLight, boolean hasAtmosphere) {
+        this.hasLight = hasLight;
+        this.hasAtmosphere = hasAtmosphere;
+    }
+    
     
 }

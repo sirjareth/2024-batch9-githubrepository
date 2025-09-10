@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.oop.inhertiance;
+package com.joysistvi.oop.abstraction;
 
 /**
  *
  * @author Yuno
  */
-public class Dog extends Animal{
+public class Cat implements Animal{
+
+
+    @Override
+    public void eat() {
+        System.out.println("Cat is eating...");
+    } 
+
     
     
-    public void eat(){
-    
-    }
 }

@@ -8,8 +8,7 @@ package com.joysistvi.oop.inhertiance;
 
 public class Animal {
     
-    public void eat(){
+     void eat(){}
         
-    }
     
 }

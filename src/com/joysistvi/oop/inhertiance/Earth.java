@@ -5,13 +5,22 @@
  */
 package com.joysistvi.oop.inhertiance;
 
-/**
- *
- * @author Yuno
- */
-public class Earth {
+
+public class Earth extends Moon{
     
-    String hasLight;
+    boolean hasAsteroid;
     
-    String hasAtmosphere;
+    // Overriding Constructor
+    public Earth(boolean hasLight, boolean hasAtmosphere, boolean hasAsteroid) {
+        super(hasLight, hasAtmosphere);
+        this.hasAsteroid = hasAsteroid;
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        
+    }
+    
+    
 }
