@@ -8,59 +8,68 @@ package com.joysis.load_reg.day20;
 import java.util.Scanner;
 
 public class LoadRegistrationSystem {
+
     static Scanner scanner = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
         mainMenu();
         scanner.close();
     }
-    
+
     public static void mainMenu() {
         System.out.println("Dial *143# to access Globe Services");
         System.out.print("Enter USSD Code: ");
         String dial = scanner.nextLine();
+        int menuChoice = -1;
 
         if (dial.equals("*143#")) {
-            int menuChoice;
-            System.out.println("\n\t* Load Registration *");
-            System.out.println("    [1] Go+");
-            System.out.println("    [2] Go");
-            System.out.println("    [3] GoEXTRA");
-            System.out.println("    [4] UNLI 5G");
-            System.out.println("    [5] ALLNET");
-            System.out.println("    [0] EXIT");
-            System.out.print("Enter a choice: ");
-            menuChoice = scanner.nextInt();
+            do {
+                System.out.println("\n\t* Load Registration *");
+                System.out.println("    [1] Go+");
+                System.out.println("    [2] Go");
+                System.out.println("    [3] GoEXTRA");
+                System.out.println("    [4] UNLI 5G");
+                System.out.println("    [5] ALLNET");
+                System.out.println("    [0] EXIT");
+                System.out.print("Enter a choice: ");
+                try {
+                    menuChoice = scanner.nextInt();
 
-            switch (menuChoice) {
-                case 1:
-                    goPlusPromo();
-                    break;
-                case 2:
-                    goPromo();
-                    break;
-                case 3:
-                    goExtraPromo();
-                    break;
-                case 4:
-                    unli5GPromo();
-                    break;
-                case 5:
-                    allNetPromo();
-                    break;
-                case 0:
-                    exitConfirmation();
-                    break;
-                default:
-                    System.out.println("Invalid Choice");
-            }
+                    switch (menuChoice) {
+                        case 1:
+                            goPlusPromo();
+                            break;
+                        case 2:
+                            goPromo();
+                            break;
+                        case 3:
+                            goExtraPromo();
+                            break;
+                        case 4:
+                            unli5GPromo();
+                            break;
+                        case 5:
+                            allNetPromo();
+                            break;
+                        case 0:
+                            exitConfirmation();
+                            break;
+                        default:
+                            System.out.println("Invalid Choice");
+
+                    }
+                } catch (Exception e) {
+                    scanner.nextLine();
+                    System.out.println("Invalid Input. Please enter a number");
+
+                }
+            } while (menuChoice != 0);
 
         } else {
             System.out.println("Invalid USSD Code");
         }
+
     }
-    
-    
 
     public static void goPlusPromo() {
         Scanner scanner = new Scanner(System.in);
@@ -72,28 +81,36 @@ public class LoadRegistrationSystem {
         System.out.println("    [4] Back");
         System.out.println("    [0] Exit");
         System.out.print("Enter a choice: ");
-        int choiceGoPlus = scanner.nextInt();
 
-        switch (choiceGoPlus) {
-            case 1:
-                subscribe("Go+99", 10, 8);
-                break;
-            case 2:
-                subscribe("Go+129", 12, 10);
-                break;
-            case 3:
-                subscribe("Go+149", 14, 12);
-                break;
-            case 4:
-                mainMenu();
-                break;
-            case 0:
-                exitConfirmation();
-                break;
-            default:
-                
+        int choiceGoPlus = -1;
+        try {
+            choiceGoPlus = scanner.nextInt();
 
+            switch (choiceGoPlus) {
+                case 1:
+                    subscribe("Go+99", 10, 8);
+                    break;
+                case 2:
+                    subscribe("Go+129", 12, 10);
+                    break;
+                case 3:
+                    subscribe("Go+149", 14, 12);
+                    break;
+                case 4:
+                    mainMenu();
+                    break;
+                case 0:
+                    exitConfirmation();
+                    break;
+                default:
+
+            }
+        } catch (Exception e) {
+            scanner.nextLine();
+            System.out.println("Invalid Input. Please enter a number");
+            goPlusPromo(); // recursion
         }
+
     }
 
     public static void subscribe(String promoType, int gb, int freebiesInGb) {
@@ -115,8 +132,7 @@ public class LoadRegistrationSystem {
         }
 
     }
-    
-    
+
     public static void subscribe(String promoType, int gb) {
         System.out.println("\n\n\t*** " + promoType + " Promo ***");
         System.out.println("-> Get " + gb + " GB for all sites + 8GB for Tiktok");
@@ -156,11 +172,11 @@ public class LoadRegistrationSystem {
     public static void exitConfirmation() {
         System.out.println("    [Y] Yes");
         System.out.println("    [N} No");
-        
+
         if (true) {
-            
+
         } else {
-            
+
         }
     }
 
